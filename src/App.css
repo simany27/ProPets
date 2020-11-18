@@ -1,38 +1,314 @@
-.App {
-  text-align: center;
+:root {
+    /*color for: horizontal block, title, header, footer*/
+    --mainColor: #669885;
+    --textColor: #393939;
+    /*color border block for text*/
+    --borderColor: #8dbfac;
+    /*color for: vertical left\right block and button*/
+    --verticalBlockColor: #84b6a3;
+    /*color for: button_active brown and block-lost*/
+    --blockLostColor: #ffe18b;
+
+    --headerHeight: 70px;
+    --bodyWhiteHeight: 623px;
+    --bodyGreenHeight: 260px;
+    --bodyWhite2Height: 450px;
+    --bodyRedHeight: 125px;
+    --footerHeight: 193px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.horizontal-block {
+    background-color: var(--mainColor);
+    color: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-nav {
+    background-color: var(--mainColor);
+    height: var(--footerHeight);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn {
+    border-radius: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+.menu a:link {
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* start block horizontal blocks */
+.horizontal-block {
+    background-color: var(--mainColor);
+    color: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.header-main {
+    background-color: white;
+    color: var(--mainColor);
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.horizontal-block_header {
+    padding: 18px 0;
+}
+
+.horizontal-block__body-green {
+    font-size: 2rem;
+}
+
+.horizontal-block__body-red {
+    background-color: #FF6F61 !important;
+}
+
+.horizontal-block__body-white {
+    background-color: white;
+    color: var(--textColor);
+}
+
+.horizontal-block_footer {
+    height: 193px;
+}
+
+.amphitheatre {
+    font-size: 0.75rem;
+}
+
+/* end block horizontal blocks */
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--mainColor);
+}
+
+/* start block elements on horizontal-block__body-white */
+.horizontal-block__body-white ul {
+    list-style: none;
+}
+
+.horizontal-block__body-white ul li::before {
+    content: "\2022";
+    color: var(--verticalBlockColor);
+    font-weight: 700;
+    display: inline-block;
+    width: 1em;
+
+}
+
+.horizontal-block__body-white li {
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+/* end block elements on horizontal-block__body-white */
+
+/* start block elements on horizontal-block__body-red */
+.h-1 {
+    font-size: calc(22px + 34 * (50vw / 570));
+}
+
+@media (max-width: 576px) {
+    .h-1 {
+        font-size: calc(22px + (34 + 17 * 0.7) * ((100vw - 320px) / 1140));
+    }
+}
+
+@media (min-width: 1140px) {
+    .h-1 {
+        font-size: 56px;
+    }
+}
+
+/*.test {
+    font-size: 56px;
+}*/
+
+.h-1 span {
+    color: var(--verticalBlockColor);
+}
+
+.planing {
+    font-weight: 600;
+}
+
+.heart {
+    position: relative;
+}
+
+.love {
+    position: absolute;
+    top: 43px;
+    left: 53px;
+}
+
+/* end block text for horizontal-block__body-red */
+
+nav ul {
+    list-style: none;
+}
+
+.border-block-for-text {
+    color: var(--borderColor);
+}
+
+.textP {
+    font-size: 4.25rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* start block button */
+.btn {
+    border-radius: 17px;
+}
+
+.btn_active-brown:hover {
+    background-color: var(--blockLostColor);
+}
+
+.btn_white-text-on-green-back {
+    color: white;
+    background-color: var(--verticalBlockColor);
+}
+
+.btn_green-text-on-white-back {
+    color: var(--borderColor);
+    border-color: white;
+}
+
+/* start block menu */
+.menu__item {
+    position: relative;
+}
+
+.menu img {
+    position: absolute;
+    top: 6px;
+    left: -25px;
+}
+
+.menu ul, .li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item a {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* end block menu */
+
+/* start block hyperlink */
+.hyperlink {
+    text-decoration: underline;
+    color: var(--verticalBlockColor);
+}
+
+.hyperlink:hover {
+    color: var(--verticalBlockColor);
+}
+
+.hyperlink_change-text_brown {
+    background-color: var(--blockLostColor);
+    border-radius: 0 50px 50px 0;
+    position: relative;
+}
+
+.img-find {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.hyperlink_change-text_green {
+    background-color: var(--verticalBlockColor);
+    border-radius: 0 50px 50px 0;
+}
+
+.hyperlink_change-text_brown, .hyperlink_change-text_green {
+    height: 93px;
+    font-size: 2rem;
+}
+
+.hyperlink_change-text_brown a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+.hyperlink_change-text_green a {
+    color: white;
+    text-decoration: none;
+}
+
+/* end block hyperlink */
+
+/* start temp block*/
+.temp-color {
+    background-color: red;
+}
+
+.fa-facebook {
+    border-radius: 50% 50% 50% 50%;
+    /*font-size: fa-5x;*/
+}
+
+/* end temp block*/
+@media (max-width: 1200px) {
+    .heart {
+        display: none;
+        /*display: ;*/
+        /*visibility: visible !important;*/
+    }
+}
+
+.heart {
+    /*visibility: hidden;*/
+    /*display: none;*/
+}
+
+.green {
+    background-color: var(--verticalBlockColor);
+    color: white;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.navbar-left {
+    color: white;
+}
+
+.navbar-left:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.textNav{
+    position: relative;
+    z-index: 20;
+}
+
+.rectangle_white {
+    background-color: white;
+    border-radius: 0 50px 50px 0;
+    height: 30px;
+    align-items: center;
+    margin-left: -120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
