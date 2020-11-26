@@ -13,11 +13,11 @@ const BodyRed = () => {
                     </div>
                     <div className="col-lg-6 col-xl-5">
                         <div className="planing">
-                            We are planing to open a new service, where your cats and dogs can find their love!
+                            We are planing to open a new service,<br/> where your cats and dogs can find their love!
                         </div>
                     </div>
                     <div className="heart col-xl-2">
-                        <img src={pictures[5]} alt={pictures[5].toString()} />
+                        <img src={pictures.heart} alt='heart' />
                             <div className="love">LOVE</div>
                     </div>
 

@@ -8,5 +8,9 @@ import lost from '../img/lost.png'
 import found from '../img/found.png'
 import vethelp from '../img/vethelp.png'
 import miniLogoGreen from '../img/group-1green.png'
+import auto from "../img/auto.png"
+import form from '../img/group-43.png'
+import download from '../img/download.png'
 
-export const pictures = [bigLogo, miniLogo, find, dog, animals, heart, lost, found, vethelp, miniLogoGreen]
+
+export const pictures = {bigLogo, miniLogo, find, dog, animals, heart, lost, found, vethelp, miniLogoGreen, auto, form, download}

@@ -57,6 +57,7 @@
 
 .horizontal-block_header {
     padding: 18px 0;
+    height: var(--headerHeight);
 }
 
 .horizontal-block__body-green {
@@ -99,7 +100,6 @@
     font-weight: 700;
     display: inline-block;
     width: 1em;
-
 }
 
 .horizontal-block__body-white li {
@@ -192,8 +192,8 @@ nav ul {
 
 .menu img {
     position: absolute;
-    top: 6px;
-    left: -25px;
+    top: 12px;
+    left: -13px;
 }
 
 .menu ul, .li {
@@ -203,7 +203,7 @@ nav ul {
 }
 
 .menu__item a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -217,12 +217,7 @@ nav ul {
 
 .hyperlink:hover {
     color: var(--verticalBlockColor);
-}
-
-.hyperlink_change-text_brown {
-    background-color: var(--blockLostColor);
-    border-radius: 0 50px 50px 0;
-    position: relative;
+    cursor: pointer;
 }
 
 .img-find {
@@ -231,9 +226,64 @@ nav ul {
     bottom: 0;
 }
 
+.hyperlink_change-text_brown {
+    background-color: var(--blockLostColor);
+    border-radius: 0 50px 50px 0;
+    position: relative;
+}
+
+.hyperlink_change-text_brown:hover {
+    background-color: #ffdc7b;
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.hyperlink_change-text_brown:before {
+    content: "I lost my pet!";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+}
+
+.hyperlink_change-text_brown:hover:before {
+    content: "Click to find!";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+}
+
 .hyperlink_change-text_green {
     background-color: var(--verticalBlockColor);
     border-radius: 0 50px 50px 0;
+    position: relative;
+}
+
+.hyperlink_change-text_green:hover {
+    background-color: var(--mainColor);
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.hyperlink_change-text_green:before {
+    content: "I found a pet!";
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+}
+
+.hyperlink_change-text_green:hover:before {
+    content: "What to do?";
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
 }
 
 .hyperlink_change-text_brown, .hyperlink_change-text_green {
@@ -295,7 +345,16 @@ nav ul {
     text-decoration: none;
 }
 
-.textNav{
+.navbar-bottom {
+    line-height: 1.7;
+}
+
+.navbar-bottom:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.textNav {
     position: relative;
     z-index: 20;
 }
@@ -307,8 +366,251 @@ nav ul {
     align-items: center;
     margin-left: -120px;
     position: absolute;
+    left: 0;
+    right: 5%;
+    z-index: 10;
+}
+
+.position-home {
+    top: 2%;
+}
+
+.position-lost {
+    top: 9%;
+}
+
+.position-found {
+    top: 17%;
+}
+
+.position-services {
+    top: 24%;
+}
+
+.position-favorites {
+    top: 31%;
+}
+
+.modalWindow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 720px;
+    height: 460px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-color: white;
+    box-shadow: 0 0.6em 0 -0.5em lightgrey;
+}
+
+.overlayWindow {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    bottom: 0;
+    backdrop-filter: blur(15px)
 }
+
+.toNetwork {
+    color: white;
+}
+
+/*ModalWindow*/
+
+.enterFB {
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.submit-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blockSign{
+    position: relative;
+    padding-right: 5px;
+    width: 680px;
+    height: 240px;
+}
+
+.emptyBlock{
+    height: 48px;
+}
+
+.paw-modal {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-green-modal {
+    color: var(--mainColor);
+    padding-top: 5px;
+}
+
+.facebook {
+    background-color: #4560A6;
+    color: white;
+    border-radius: 20px;
+    border: #4560A6 solid 2px;
+}
+
+.green-button {
+    padding: 0;
+    height: 34px;
+    color: black;
+    border: var(--mainColor) solid 1px;
+}
+
+.green-button-active {
+    padding: 0;
+    height: 34px;
+    color: black;
+    border: var(--mainColor) solid 1px;
+}
+
+.text-white-modal {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+.input-modalWindow {
+    border-color: white;
+    font-size: 12px;
+    width: 205px;
+    box-shadow: 0 0.6em 0 -0.5em #669885;
+}
+
+.fieldName {
+    font-size: 14px;
+    text-align: right;
+    position: relative;
+    top: 12px;
+}
+
+.pass {
+    font-size: 12px;
+    color: gray;
+}
+
+.green-button-modal {
+    padding: 0;
+    background-color: var(--mainColor);
+    height: 34px;
+    color: white;
+}
+
+.white-button-modal {
+    padding: 0;
+    background-color: white;
+    height: 34px;
+    width: 100px;
+    color: var(--mainColor);
+    border-color: 1 solid var(--mainColor);
+}
+
+.green-button-modal:hover {
+    background-color: var(--mainColor);
+    color: white;
+}
+
+.white-button-modal:hover {
+    color: var(--mainColor);
+    border-color: 1 solid var(--mainColor);
+    background-color: white;
+}
+
+/*End of ModalWindow*/
+
+.button-addNew {
+    background-color: var(--verticalBlockColor);
+    color: white;
+    padding: 0;
+    height: 40px;
+}
+
+.button-addNew:hover {
+    background-color: var(--verticalBlockColor);
+    color: white;
+}
+
+.button-ILost {
+    background-color: #FFE18B;
+    color: black;
+    padding: 0;
+    height: 40px;
+}
+
+.button-ILost:hover {
+    background-color: #FFE18B;
+    color: black;
+}
+
+
+
+
+/*Form*/
+.form {
+    padding: 0;
+    margin: 0;
+    height: 22px;
+}
+
+textarea {
+    box-shadow: 0 0 0 0.1em lightseagreen;
+}
+
+.select-form {
+    height: 220px;
+    overflow: hidden;
+    border-color: white;
+    box-shadow: 0 0 0 0.1em lightseagreen;
+    font-size: 1rem;
+    color: gray;
+}
+
+.fieldset {
+    padding: 30px;
+    border-color: white;
+    box-shadow: 0 0 0.1em 0.1em rgba(152, 150, 150, 0.5);
+    width: auto;
+}
+
+/*Profile*/
+.fieldset-profile {
+    box-shadow: 0 0 0.1em 0.1em rgba(152, 150, 150, 0.5);
+    width: auto;
+    margin: 20px;
+}
+
+.text-white {
+    color: white;
+}
+
+.green-button2 {
+    padding: 0;
+    background-color: var(--mainColor);
+    height: 34px;
+    color: black;
+}
+
+.green-button2:hover {
+    color: black;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.text-green {
+    color: var(--verticalBlockColor)
+}
+
+
+

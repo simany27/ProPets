@@ -7,7 +7,7 @@ const BodyWhite2 = () => {
             <div className="container h-100">
                 <div className="row align-items-center h-100">
                     <div className="col-lg-5">
-                        <img src={pictures[4]} alt={pictures[4].toString()} />
+                        <img src={pictures.animals} alt='animals' />
                     </div>
                     <div className="col-lg-7">
                         <div className="title">Here is collected everything that your pet needs:</div>
