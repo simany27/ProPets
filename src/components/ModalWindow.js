@@ -82,8 +82,8 @@ const ModalWindow = (props) => {
                 </div>
                 <div className="col-4">
                     <NavLink to={props.purpose}
-                             // onClick={() => !pageLogin? props.register(name,email,password,passwordConfirm) :
-                             //     props.login(email,password)}
+                             onClick={() => !pageLogin? props.register(name,email,password,passwordConfirm) :
+                                 props.login(email,password)}
                              className='nav-link btn btn-outline-light green-button-modal'>
                         <div><FaPaw size="18px" fixedWidth className="paw-modal"/>
                             <span className="submit-modal">Submit</span></div>

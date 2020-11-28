@@ -6,8 +6,7 @@ import BodyWhite from "../components/BodyWhite";
 import BodyGreen from "../components/BodyGreen";
 import BodyWhite2 from "../components/BodyWhite2";
 import Modal from 'react-modal';
-//import ModalWindow from "../containers/SignContainer";
-import ModalWindow from "../components/ModalWindow";
+import ModalWindow from "../containers/SignContainer";
 
 export const Home = () => {
     const [isModal, setModal] = useState(false);
