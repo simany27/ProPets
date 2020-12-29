@@ -25,6 +25,7 @@ export const Home = () => {
 
             <Modal
                 isOpen={isModal}
+                ariaHideApp={false}
                 className="modalWindow"
                 overlayClassName="overlayWindow"
             >

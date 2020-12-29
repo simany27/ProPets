@@ -1,12 +1,6 @@
 import {applyMiddleware, createStore} from "redux";
+import {RootReducer} from "../reducers/RootReducer";
 import thunk from "redux-thunk";
-import {accountingReducer} from "../reducers/accountingReducer";
 
 
-const initialState = {
-    name:'',
-    email:'',
-    password:''
-}
-
-export const store = createStore(accountingReducer, initialState, applyMiddleware(thunk))
+export const store = createStore(RootReducer, undefined,  applyMiddleware(thunk));

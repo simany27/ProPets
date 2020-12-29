@@ -3,6 +3,17 @@ import ModalWindow from "../components/ModalWindow";
 import {bindActionCreators} from "redux";
 import {loginAction, registerAction} from "../actions/AccountingActions";
 
+function mapStateToProps(state){
+    return {
+        accounting:{
+            userExist: state.accounting.userExist,
+            email: state.accounting.email,
+            loginWrong: state.accounting.loginWrong,
+            passwordWrong: state.accounting.passwordWrong
+        }
+    }
+}
+
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
         register: registerAction,
@@ -10,4 +21,4 @@ function mapDispatchToProps(dispatch) {
     }, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(ModalWindow);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalWindow);

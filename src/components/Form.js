@@ -28,9 +28,7 @@ const Form = () => {
                                     </select>
                                 </div>
                             </div>
-                            {/*</div>*/}
                             <div className="row">
-                                {/*<div className="form-group">*/}
                                 <div className="col-2">
                                     <label htmlFor="exampleFormControlSelect1" className='d-inline small'>Sex</label>
                                 </div>
@@ -41,7 +39,6 @@ const Form = () => {
                                     </select>
                                 </div>
                             </div>
-                            {/*<div className="form-group">*/}
                             <div className="row">
                                 <div className="col-2">
                                     <label htmlFor="exampleFormControlTextarea1"
@@ -52,7 +49,6 @@ const Form = () => {
                                            placeholder={'Golden Retriever'}/>
                                 </div>
                             </div>
-                            {/*<div className="form-group">*/}
                             <div className="row">
                                 <div className="col-2">
                                     <label htmlFor="exampleFormControlTextarea1" className='small'>Color</label>

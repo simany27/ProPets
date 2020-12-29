@@ -15,6 +15,7 @@ const Login = (props) => {
                         className="form-control input-modalWindow" type="email"
                         placeholder={'helenjohnson@gmail.com'} required/>
                 </div>
+                <div className="col-6 text-danger">{props.loginWrong ? "Login Wrong" : props.passwordWrong ? "Password Wrong" : ""}</div>
             </div>
             <div className="form-group row">
                 <div className="col-2 fieldName">

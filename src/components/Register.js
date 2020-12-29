@@ -1,6 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Register = (props) => {
+    const [password1, setPassword1] = useState('');
+    const [password2, setPassword2] = useState('');
+
+    const checkPassword = () => {
+        if (password1 === password2) {
+            props.password(password1);
+        } else {
+            props.password('');
+        }
+    }
 
     return (
         <div>
@@ -14,6 +24,7 @@ const Register = (props) => {
                         className="form-control input-modalWindow" type="text" placeholder={'Helen Johnson'}
                         required/>
                 </div>
+                <div className="col-6 text-danger">{props.userExist ? "User is already exist" : ""}</div>
             </div>
             <div className="form-group row">
                 <div className="col-2 fieldName">
@@ -32,7 +43,10 @@ const Register = (props) => {
                 </div>
                 <div className="col-4">
                     <input
-                        onChange={event => props.password(event.target.value)}
+                        onChange={event => {
+                            setPassword1(event.target.value);
+                            checkPassword()
+                        }}
                         className="form-control input-modalWindow" type="password"
                         placeholder={'****************'} required/>
                 </div>
@@ -47,9 +61,13 @@ const Register = (props) => {
                 </div>
                 <div className="col-4">
                     <input
-                        onChange={event => props.passwordConfirm(event.target.value)}
+                        onChange={event => {
+                            setPassword2(event.target.value);
+                            checkPassword()
+                        }}
                         className="form-control input-modalWindow" type="password"
                         placeholder={'****************'} itemType="password" required/>
+                    <div>{password1 === password2 ? "" : "Wrong password"}</div>
                 </div>
                 <div className="col-6 pass">
                     Please re-enter your password

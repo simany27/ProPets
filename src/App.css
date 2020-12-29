@@ -90,11 +90,11 @@
 }
 
 /* start block elements on horizontal-block__body-white */
-.horizontal-block__body-white ul {
+.horizontal-block__body-white > ul {
     list-style: none;
 }
 
-.horizontal-block__body-white ul li::before {
+.horizontal-block__body-white > ul > li::before {
     content: "\2022";
     color: var(--verticalBlockColor);
     font-weight: 700;
@@ -317,14 +317,7 @@ nav ul {
 @media (max-width: 1200px) {
     .heart {
         display: none;
-        /*display: ;*/
-        /*visibility: visible !important;*/
     }
-}
-
-.heart {
-    /*visibility: hidden;*/
-    /*display: none;*/
 }
 
 .green {
@@ -354,41 +347,62 @@ nav ul {
     text-decoration: none;
 }
 
-.textNav {
+.divPos {
     position: relative;
-    z-index: 20;
+    height: 35px;
+}
+
+.divPos2 {
+    position: relative;
+    height: 70px;
+}
+
+.divPos3 {
+    background-color: #669885;
+    border-radius: 0 20px 20px 0;
+    margin-left: -200px;
+    margin-top: -50px;
+    position: relative;
+    right: 5%;
+    height: 180px;
+}
+
+.divPos4 {
+    position: relative;
+    margin-left: 200px;
+    height: 15px;
+}
+
+.services {
+    color: #84b6a3;
+}
+
+.services:hover {
+    color: #84b6a3;
+}
+
+.textPos {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 30;
 }
 
 .rectangle_white {
     background-color: white;
     border-radius: 0 50px 50px 0;
-    height: 30px;
-    align-items: center;
-    margin-left: -120px;
+    height: 100%;
+    margin-left: -200px;
     position: absolute;
+    top: 2%;
     left: 0;
     right: 5%;
     z-index: 10;
 }
 
-.position-home {
-    top: 2%;
-}
-
-.position-lost {
-    top: 9%;
-}
-
-.position-found {
-    top: 17%;
-}
-
-.position-services {
-    top: 24%;
-}
-
-.position-favorites {
-    top: 31%;
+.position-profile {
+    top: 42%;
+    height: 60px;
 }
 
 .modalWindow {
@@ -433,14 +447,14 @@ nav ul {
     transform: translate(-50%, -50%);
 }
 
-.blockSign{
+.blockSign {
     position: relative;
     padding-right: 5px;
     width: 680px;
     height: 240px;
 }
 
-.emptyBlock{
+.emptyBlock {
     height: 48px;
 }
 
@@ -543,6 +557,18 @@ nav ul {
     color: white;
 }
 
+.photo-add {
+    background-color: var(--verticalBlockColor);
+    color: white;
+    padding: 0;
+    width: 100%;
+}
+
+.img-small{
+    width: 100%;
+    height: calc(100%/3);
+}
+
 .button-ILost {
     background-color: #FFE18B;
     color: black;
@@ -556,8 +582,6 @@ nav ul {
 }
 
 
-
-
 /*Form*/
 .form {
     padding: 0;
@@ -567,6 +591,11 @@ nav ul {
 
 textarea {
     box-shadow: 0 0 0 0.1em lightseagreen;
+}
+
+.form-control{
+    box-shadow: none;
+    border: none;
 }
 
 .select-form {
@@ -606,11 +635,99 @@ textarea {
 .green-button2:hover {
     color: black;
     background-color: rgba(0, 0, 0, .2);
+    cursor: pointer;
 }
 
 .text-green {
     color: var(--verticalBlockColor)
 }
 
+.input-Profile {
+    border-color: white;
+    font-size: 12px;
+    width: 405px;
+    box-shadow: 0 0.6em 0 -0.5em #669885;
+}
 
+.profilePhoto {
+    position: relative;
+}
 
+.cameraIcon {
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0px 3px 6px #00000029;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.avatar {
+    height: 43px;
+    width: 43px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.photo-review{
+    width: 100%;
+}
+
+.cursor {
+    cursor: pointer
+}
+
+.file-inputs {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+}
+
+.file-inputs2 {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    width: 110px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.file {
+    position: relative;
+    text-align: right;
+    -moz-opacity: 0;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    z-index: 15;
+}
+
+.small {
+    width: 45px;
+    height: 45px;
+}
+
+.little{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.right{
+    text-align: right;
+}
+
+.list-img{
+    list-style-type: none;
+    color: darkgray;
+}
+
+.borderGreen{
+    box-shadow: 0 0 0 0.1em lightseagreen;
+}

@@ -14,3 +14,8 @@ import download from '../img/download.png'
 
 
 export const pictures = {bigLogo, miniLogo, find, dog, animals, heart, lost, found, vethelp, miniLogoGreen, auto, form, download}
+
+export const base_url = 'https://propets-app.herokuapp.com';
+export const register_endpoint = '/account/en/v1/registration';
+export const login_endpoint = '/account/en/v1/login';
+export const edit_endpoint = '/account/en/v1/';
